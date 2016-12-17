@@ -2,12 +2,10 @@
 # system.prop for t0lte
 #
 
-rild.libpath=/system/lib/libsec-ril.so
+dalvik.vm.dexopt-data-only=1
+dalvik.vm.dex2oat-Xmx=256m
+rild.libpath=/system/lib/ril-wrapper.so
 rild.libargs=-d /dev/ttyS0
-ro.telephony.default_network=9
-telephony.lteOnGsmDevice=1
-ro.ril.telephony.mqanelements=6
-
 ro.sf.lcd_density=320
 ro.lcd_min_brightness=20
 
