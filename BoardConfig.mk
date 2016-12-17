@@ -40,6 +40,10 @@ BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/t0lte/bluetooth
 TARGET_KERNEL_SOURCE := kernel/samsung/smdk4412
 TARGET_KERNEL_CONFIG := cyanogenmod_t0lte_defconfig
 
+# Cache
+BOARD_CACHEIMAGE_PARTITION_SIZE := 1048576
+BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := f2fs
+
 # Recovery
 TARGET_RECOVERY_FSTAB := device/samsung/t0lte/rootdir/fstab.smdk4x12
 TARGET_USERIMAGES_USE_F2FS := true
