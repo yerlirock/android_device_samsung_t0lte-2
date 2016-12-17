@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2013 The CyanogenMod Project
+# Copyright (C) 2012 The CyanogenMod Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -13,17 +13,42 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+include device/samsung/smdk4412-common/BoardCommonConfig.mk
 
-# This variable is set first, so it can be overridden
-# by BoardConfigVendor.mk
--include device/samsung/smdk4412-common/BoardCommonConfig.mk
--include device/samsung/smdk4412-qcom-common/BoardCommonConfig.mk
+# Bionic
+MALLOC_SVELTE := true
+TARGET_NEEDS_PLATFORM_TEXT_RELOCATIONS := true
+LIBART_IMG_BASE := 0x30000000
 
--include device/samsung/t0lte/BoardCommonConfig.mk
+# RIL
+BOARD_PROVIDES_LIBRIL := true
+BOARD_MODEM_TYPE := xmm6262
+TARGET_SPECIFIC_HEADER_PATH := device/samsung/t0lte/include
+BOARD_GLOBAL_CFLAGS += -DDISABLE_ASHMEM_TRACKING
+BOARD_RIL_CLASS := ../../../device/samsung/t0lte/ril
 
-# GPS
-BOARD_GPS_SET_PRIVACY := true
+# Graphics
+TARGET_REQUIRES_SYNCHRONOUS_SETSURFACE := true
 
-# inherit from the proprietary version
--include vendor/samsung/t0lte/BoardConfigVendor.mk
+# Bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/t0lte/bluetooth
+
+# Kernel
+TARGET_KERNEL_SOURCE := kernel/samsung/smdk4412
+TARGET_KERNEL_CONFIG := cyanogenmod_t0lte_defconfig
+
+# Recovery
+TARGET_RECOVERY_FSTAB := device/samsung/t0lte/rootdir/fstab.smdk4x12
+TARGET_USERIMAGES_USE_F2FS := true
+RECOVERY_FSTAB_VERSION := 2
+
+# PowerHAL
+TARGET_POWERHAL_VARIANT := pegasusq
+
+# Selinux
+BOARD_SEPOLICY_DIRS += \
+    device/samsung/t0lte/selinux
+
+# assert
+TARGET_OTA_ASSERT_DEVICE := t0lte,N7105,GT-N7105
 
