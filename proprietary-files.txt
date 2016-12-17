@@ -1,3 +1,4 @@
+system/bin/gpsd
 system/bin/at_distributor
 system/bin/diag_uart_log
 system/bin/efsks
@@ -9,6 +10,7 @@ system/bin/rild
 system/bin/smdexe
 system/etc/Diag.cfg
 system/etc/Diag_zero.cfg
+system/lib/hw/gps.default.so
 system/lib/libakm.so
 system/lib/libatparser.so
 system/lib/libcordon.so
