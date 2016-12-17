@@ -46,8 +46,8 @@ RECOVERY_FSTAB_VERSION := 2
 TARGET_POWERHAL_VARIANT := pegasusq
 
 # Selinux
-BOARD_SEPOLICY_DIRS += \
-    device/samsung/t0lte/selinux
+#BOARD_SEPOLICY_DIRS += \
+#    device/samsung/t0lte/selinux
 
 # assert
 TARGET_OTA_ASSERT_DEVICE := t0lte,N7105,GT-N7105
