@@ -38,7 +38,7 @@ BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/t0lte/bluetooth
 
 # Kernel
 TARGET_KERNEL_SOURCE := kernel/samsung/smdk4412
-TARGET_KERNEL_CONFIG := cyanogenmod_t0lte_defconfig
+TARGET_KERNEL_CONFIG := lineageos_t0lte_defconfig
 
 # Cache
 BOARD_CACHEIMAGE_PARTITION_SIZE := 1048576
