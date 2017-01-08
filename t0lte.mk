@@ -94,9 +94,8 @@ PRODUCT_COPY_FILES += \
     $(NFCEE_ACCESS_PATH):system/etc/nfcee_access.xml
 
 PRODUCT_PACKAGES += \
-    com.android.nfc_extras
-
-$(call inherit-product, vendor/cm/config/nfc_enhanced.mk)
+    com.android.nfc_extras \
+    Stk
 
 # RIL
 PRODUCT_PROPERTY_OVERRIDES += \
