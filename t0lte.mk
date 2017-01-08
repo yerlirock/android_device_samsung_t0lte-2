@@ -61,14 +61,6 @@ PRODUCT_PACKAGES += \
 	libsamsung_symbols \
 	libsecril-shim
 
-# NFC
-PRODUCT_PACKAGES += \
-	nfc.exynos4 \
-    libnfc \
-    libnfc_jni \
-    Nfc \
-    Tag
-
 # Camera
 PRODUCT_PACKAGES += \
     camera.smdk4x12
@@ -79,6 +71,14 @@ PRODUCT_PACKAGES += \
 	fsck.f2fs \
 	mkfs.f2fs
 
+# NFC
+PRODUCT_PACKAGES += \
+	nfc.exynos4 \
+    libnfc \
+    libnfc_jni \
+    Nfc \
+    Tag
+    
 PRODUCT_COPY_FILES += \
     frameworks/base/nfc-extras/com.android.nfc_extras.xml:system/etc/permissions/com.android.nfc_extras.xml \
     frameworks/native/data/etc/android.hardware.nfc.xml:system/etc/permissions/android.hardware.nfc.xml
